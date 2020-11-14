@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0">
+    <title>云家园</title>
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="shortcut icon" type=image/x-icon href=https://pass-y.ncuos.com/favicon.ico>
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        h3 {
+            font-weight: 300;
+        }
+
+        .form1 {
+            background-color: #fff;
+            border-radius: 8px;
+            color: #666;
+            max-width: 450px;
+            padding: 10px 30px;
+            margin: 40px auto 0;
+        }
+
+        .bg {
+            background: #bbb url(https://pass-y.ncuos.com/bg.jpg) 50% no-repeat fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .visible {
+            width: 100% !important;
+            height: 100% !important;
+            overflow: auto !important;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .text-primary {
+            color: #428bca;
+        }
+
+        .form-horizontal .control-label {
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            position: relative;
+        }
+
+        .icon input {
+            padding-left: 30px;
+        }
+
+        .icon .fa {
+            color: gray;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="visible bg">
+        <div class="container">
+            <form class="form-horizontal form1" role="form">
+                <div class="row" style="padding: 0px 20px;">
+                    <h3 class="text-center text-primary">
+                        <i class="fa fa-mixcloud fa-fw">
+                        </i>
+                        云家园
+                        <small>信息服务平台</small>
+                        <a class="btn btn-success btn-xs"
+                            href="https://shang.qq.com/wpa/qunwpa?idkey=1ffcd88386a31108288aa8ef1b3879522672818d153e00e6f492d13ebf13efae">帮助</a>
+                    </h3>
+                    <div class="form-group">
+                        <label for="username" class="control-label">账号</label>
+                        <div class="icon">
+                            <i class="fa fa-user"></i>
+                            <input type="text" class="form-control" id="username" placeholder="请输入学号/工资号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码</label>
+                        <div class="icon">
+                            <i class="fa fa-lock"></i>
+                            <input type="text" class="form-control" id="password" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="true">下次自动登入
+                            </label>
+                            <div class="pull-right">
+                                <a href="https://ncuos.com/loginBox/regainPassword" target="_blank">忘记密码?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <span data-toggle="modal" data-target="#myModal1" id="login"
+                                class="btn btn-lg btn-primary btn-block">登录</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <a data-toggle="modal" data-target="#myModal2">
+                            <span class="btn btn-block btn-primary btn-lg" _v-eedc47ee="">
+                                <strong>新生注册</strong>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="form-group alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <p>
+                            <strong>新生(本科)自助报到系统</strong>请关注<strong>南昌大学家园网</strong>微信公众号，了解更多具体新生报道系统流程<br>
+                            家园工作室QQ：<a
+                                href="http://qm.qq.com/cgi-bin/qm/qr?k=OtyR5Xib0OPbuAtjZtXeyVc5-a6y7zQU">2459289916</a><br>
+                            2020南昌大学本科迎新群：
+                            <a target="_blank"
+                                href="https://qm.qq.com/cgi-bin/qm/qr?k=pCH_WujTSR0gER5lAakD1mbywk5EXK1X&amp;jump_from=webapi">
+                                <img src="https://pub.idqqimg.com/wpa/images/group.png" alt="南昌大学2020官方迎新"
+                                    title="南昌大学2020官方迎新">
+                            </a><br>
+                            校园APP：<a target="_blank" href="https://incu.ncuos.com">南大家园</a>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="https://itunes.apple.com/us/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561?mt=8"
+                                        class="btn btn-danger btn-block">
+                                        <i class="fa fa-apple fa-fw"></i>ios版
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="https://itunes.apple.com/us/app/%E5%8D%97%E5%A4%A7%E5%AE%B6%E5%9B%AD/id1209726561?mt=8"
+                                        class="btn btn-success btn-block">
+                                        <i class="fa fa-android fa-fw"></i>Android版
+                                    </a>
+                                </div>
+                                <div>
+                        </blockquote>
+                        <p>
+                            <small>
+                                下载南大家园手机客户端
+                                <i class="fa fa-hand-o-up"></i>
+                            </small>
+                        </p>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <form id="form1" action="#" class="form-horizontal form">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h5 class="modal-title" id="myModalLabel">
+                                个人信息
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">姓名</label>
+                                <label class="col-sm-7 control-label" id="name"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">学号</label>
+                                <label class="col-sm-7 control-label" id="xh"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">性别</label>
+                                <label class="col-sm-7 control-label" id="xb"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">入学年月</label>
+                                <label class="col-sm-7 control-label" id="rxny"></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">qq号</label>
+                                <label class="col-sm-7 control-label" id="qq"></label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                唉，我好菜
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div>
+            </form><!-- /.modal -->
+        </div>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <form id="form1" action="#" class="form-horizontal form">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h5 class="modal-title" id="myModalLabel">
+                                新生注册
+                            </h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-3 control-label">考生号</label>
+                                <div class="col-sm-7">
+                                    <input type="number" class="form-control" id="firstname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-3 control-label">身份证号</label>
+                                <div class="col-sm-7">
+                                    <input type="number" class="form-control" id="lastname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">
+                                查询
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div>
+            </form><!-- /.modal -->
+        </div>
+        <div id="cover">
+        </div>
+    </div>
+
+    <script>
+        $('#login').click(function () {
+            var username = $('#username').val()
+            var password = $('#password').val()
+            fetch("https://os.ncuos.com/api/user/token", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                })
+            })
+                .then(res => res.json())
+                .then((json) => {
+                    if (!("token" in json)) {
+                        alert("用户名或密码错误")
+                    }
+                    else {
+                        token = json.token;
+                        fetch('https://os.ncuos.com/api/user/profile/basic', {
+                            method: 'GET',
+                            headers: {
+                                'Authorization': 'passport ' + token,
+                            },
+                        })
+                            .then(response => response.json())
+                            .then(response => {
+                                console.log(response);
+                                document.getElementById('name').innerHTML = response.base_info.xm
+                                document.getElementById('xh').innerHTML = response.base_info.xh
+                                document.getElementById('xb').innerHTML = response.base_info.xb.mc
+                                document.getElementById('rxny').innerHTML = response.base_info.rxny
+                                document.getElementById('qq').innerHTML = response.base_info.qq
+                            })
+                    }
+                })
+        })
+    </script>
+</body>
+
+
+</html>
